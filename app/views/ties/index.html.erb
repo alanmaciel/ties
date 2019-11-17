@@ -1,0 +1,8 @@
+<h1>Ties</h1>
+<ul>
+  <% @ties.each do |tie| %>
+    <li><%= link_to(tie.name, "#") %></li>
+    <p><%= truncate(tie.description, length: 35, separator: ' ') %></p>
+    <p><%= show_dates(tie) %></p>
+  <% end %>
+</ul>
